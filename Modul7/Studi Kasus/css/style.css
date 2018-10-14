@@ -1,0 +1,49 @@
+*{
+    font-family: Segoe UI;
+}
+body{
+    background: url(../img/mainbg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+a{
+    color: #fff;
+}
+.wrapinfo{
+    padding: 20px;
+    position: fixed; 
+    bottom: 0; 
+    left: 0; 
+    color: #fff; 
+    margin: 20px
+}
+.timeinfo{
+    font-size: 55px; 
+    font-weight: 500
+}
+.dateinfo{
+    font-size: 25px
+}
+.greetinfo{
+    padding: 20px;
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    color: #fff; 
+    margin: 20px;
+    font-size: 15pt;
+}
+.infolink{
+    padding: 20px;
+    position: fixed; 
+    top: 120px; 
+    right: 20px; 
+    color: #fff; 
+    margin: 20px;
+    font-size: 10pt;
+    background: rgba(0, 0, 0, 0.39);
+}
+.desc{
+    font-size: 10pt;
+}

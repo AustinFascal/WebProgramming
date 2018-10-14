@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+        }
+        #wrapper {
+            margin: auto;
+            width: 1000px;
+            background: rgb(243, 23, 23);
+            padding: 10px 0 10px 0;
+        }
+        #header {
+            height: 100px;
+            background: rgb(236, 84, 64);
+            margin-bottom: 10px;
+        }
+        #inner {
+            float: left;
+            border: 1px solid white;
+        }
+        #sidebar {
+            float: left;
+            width: 175px;
+            height: 500px;
+            background: #CCFF99;
+            border: 1px solid white;
+        }
+        #top {
+            float: left;
+            width: 821px;
+        }
+        #content {
+            float: left;
+            width: 420px;
+            height: 220px;
+            background: #FFFFCC;
+            border: 1px solid white;
+            padding: 20px;
+        }
+        #right {
+            float: right;
+            width: 317px;
+            background: #CCFF99;
+            border: 1px solid white;
+            padding: 20px;
+        }
+        #footer {
+            clear:both;
+            height: 50px;
+            background: #6cae15;
+            border: 1px solid white;
+        }
+        #leftmenu ul {
+            width: 175px;
+            list-style-type:none;
+            padding:0; margin:0;
+        }
+        #leftmenu a:link, #leftmenu a:visited, #leftmenu a:active {
+            padding-left: 15px;
+            text-decoration: none;
+        }
+        #leftmenu a {
+            padding: 5px 0px 5px 15px; display: block;
+            background: #6cae15 no-repeat left center;
+            margin: 0px 0px 1px; color: #ffffff;
+        }
+        #leftmenu a:hover {
+            background: #5e9711 no-repeat left center; 
+            color: #ffffff
+        }
+        #box1 {
+            float: left;
+            margin-right:10px;
+            width: 91px;
+            height: 98px;
+            background: #FFFFFF;
+        }
+        #box2{
+            float: right;
+            margin-right: 20px;
+            margin-top: 7px;
+            /* width: 60px; */
+            height: 20px;
+            background: #99CC00;
+            border: 1px solid #99CC00;
+        }
+        #box3{
+            float: right;
+            margin-right: 5px;
+            margin-top: 7px;
+            width: 35px;
+            height: 20px;
+            background: #99CC00;
+            border: 1px solid #99CC00;
+        }
+        #box4{
+            float: right;
+            margin-right: 5px;
+            margin-top: 7px;
+            width: 32px;
+            height: 20px;
+            background: #99CC00;
+            border: 1px solid #99CC00;
+        }
+        #box6{
+            float: right;
+            margin-right: 5px;
+            margin-top: 7px;
+            /* width: 50px; */
+            height: 20px;
+            background: #99CC00;
+            border: 1px solid #99CC00;
+        }
+        #box7 {
+            float: left;
+            margin-right: 5px;
+            margin-top: 2px;
+            width: 490px;
+            height: 85px;
+        }
+        #box8 {
+            float: left;
+            width: 100%;
+        }
+        #box9 {
+            float: left;
+            margin-right: 0px;
+            margin-top: 5px;
+            width: 400px;
+            height: 110px;
+            background: #FFFFCC;
+        }
+        #link{
+            float: right;
+            margin-top: 10px;
+            margin-right: 10px
+        }
+        #search{
+            float:right;
+            margin-top: 35px;
+        }
+        #logo{
+            float: left;
+            margin: 15px 0 0 50px; 
+        }
+        a{
+            text-decoration: none;
+        }
+        span{
+            float: right;
+        }
+        h1{
+            margin: 10px 0 0 20px;
+        }
+        h3{
+            margin: 0;
+        }
+        h4{
+            margin: 0;
+            font-weight: normal;
+        }
+        p{
+            margin: 0;
+            
+        }
+    </style>
+</head>
+<body>
+<div id="wrapper">
+    <div id="header">
+        <div id="logo">
+            <img src="img/umlogo.png" height="60" align="center">
+                <span>
+                    <h1><a href="" style="color:darkblue">TEKNIK ELEKTRO </a></h1>
+                </span>
+        </div>  
+        <div id="link">
+                <div>
+                    <a href="#">Home</a> | 
+                    <a href="#">Sitemap</a> | 
+                    <a href="#">RSS</a> | 
+                    <a href="#">Contact</a> | 
+                    <a href="#">About Us</a>
+                </div>
+                <div id="search">
+                    <table border="0">
+                        <tr>
+                            <td>Search</td>
+                            <td><input type="text"/></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+    </div>
+    <div id="inner">
+        <div id="sidebar">
+            <div id="leftmenu">
+                <ul>
+                    <li><a href="#"">Home</a></li>
+                    <li><a href="#">News and Media</a></li>
+                    <li><a href="#">Tutorials</a></li>
+                    <li><a href="#">Tips and Tricks</a></li>
+                    <li><a href="#">Downloads</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="top">
+            <div id = "box8">
+                <img src="img/slider1.png" width="100%">
+            </div>
+        </div>
+        <div id="content">
+            <h3>Balekambang nan Menawan</h3>
+            <h4>23 September 2018 | 16.40 WIB</h4>
+            <br/>
+            Buat Sparta-sparti 23, kita-kita mau mengadakan acara ngumpul-ngumpul bareng lho…. satu angkatan. <br/>
+            Jadi buat temen-temen diharap kedatangannya. Acaranya :<br/>
+            <br/>
+            Hari / Tanggal : Sabtu / 27 Februari 2010 <br/>
+            Jam                                                           : 19.00 s/d selesai (subuh) <br/>
+            Tempat                                     : Pulosari (PS) <br/>
+        </div>
+        <div id="right">
+            <b>News :</b>
+            <ul>
+                <li>Tren Desain Web</li>
+                <li>Tips SEO Friendly</li>
+                <li>Boost Your Web Speed</li>
+        </div>
+        <div id="right">
+            <b>Events :</b>
+            <ul>
+                <li>Lomba Panjat Tiang Listrik</li>
+                <li>Lomba Tarik Kabel</li>
+                <li>Balap Karung 10 KM</li>
+        </div>
+    </div>
+    <div id="footer">
+        <h3 align="center">&copy; 2018 Teknik Elektro UM. Malang, Indonesia.</h3>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,352 @@
+/*
+===============================================
+Copyright: Austin Studio 2018
+
+PLEASE NOTE:
+This project is entirely made by Austin Studio.
+It was made purely with CSS and HTML only. 
+I actually wanted to give a #profileShowToggle
+as a toggle to show up the profile details. But
+the time is limited, so I left it.
+===============================================
+*/
+
+
+/* DEFAULT STYLES */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Google Sans Display';
+}
+body {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+h1 {
+  font-size: 1.5em;
+}
+hr {
+  border: 1px solid rgb(240, 240, 240); 
+  margin: 10px 0 10px 0;
+}
+#heading {
+  width: 120px;
+  height: 20px;
+  background: #fff;
+  border-radius: 90px;
+  margin-top: 40px;
+}
+/* END DEFAULT STYLES */
+
+/* ANIMATION PART */
+.fade-in {
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-timing-function: ease-in;
+	animation-duration: 1s;
+}
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+/* END ANIMATION PART */
+
+/* SECTIONS PART*/
+section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.wrapview {
+  width: 90%;
+  max-width: 1240px;
+  margin: 30px 0 30px 0;
+  display: grid;
+  grid-template-rows: auto;
+  grid-gap: 20px;
+}
+.cardview {
+  background: white;
+  color: #575757;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  transition: all .1s ease-in;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.cardview:hover {
+  top: -2px;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+}
+.cardview desc {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.cardview h1 {
+  font-size: 20px;
+  margin: 0;
+  color: #333;
+}
+.cardview p {
+  flex: 1;
+  line-height: 1.4;
+}
+.cardview span {
+  color: #999;
+  font-size: 12pt;
+  font-weight: bold;
+  letter-spacing: .05em;
+  margin: 2em 0 0 0;
+  text-transform: uppercase;
+}
+.date{
+  color: #999;
+  font-size: 10pt;
+  margin: 0;
+}
+.post-title-big{
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.post-title-small{
+  width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.username{
+  width: 60%;
+  white-space: nowrap; 
+  overflow: hidden;
+  display: inline-block;
+  margin-left: 20px;
+  text-overflow: ellipsis;
+}
+img.profile{
+  width: 30px;
+  border-radius: 100%;
+  float: left;
+}
+.cardview .featured-image {
+  padding-bottom: 60%;
+  background-size: cover;
+  background-position: center center;
+}
+@media (min-width: 40em) {
+  .wrapview {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 65em) {
+  .wrapview {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (min-width: 65em) {
+  .item-1 {
+    grid-column: 1 / span 2;
+  }
+  .item-1 h1 {
+    font-size: 24px;
+  }
+}
+/* END SECTIONS PART*/
+
+/* FOOTER STYLES */
+footer{
+  height: auto;
+  background: #414648;
+  text-align: center;
+  color: white;
+  padding: 40px;
+}
+/* END FOOTER STYLES */
+
+/* 
+CENTER CONTENT HACK :D 
+HEADER STYLES
+*/
+header {
+  width: 100vw;
+  height: 100vh;
+  background: #5661f2;
+  display: flex;
+}
+
+/* NAVIGATION STYLES */
+nav {
+  width: 100vw;
+  height: 90px;
+  z-index: 1;
+  display: grid;
+  position: fixed;
+  background: #50b6f1;
+  grid-template-columns: 1fr 1fr;
+  transition: all 0.3s;
+  box-shadow: 0 4px 30px -5px rgba(0, 0, 0, 0.2);
+}
+#brand, #profile-picture{
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+#brand {
+  padding-left: 25px;
+}
+#logo-brand {
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+}
+#word-brand {
+  width: 170px;
+  vertical-align: middle;
+  box-shadow: 0 4px 30px -5px rgba(0, 0, 0, 0.2);
+  background: #fff;
+  border-radius: 90px;
+  margin-left: 20px;
+  opacity: 1;
+  padding-left: 15px;
+  transition: all 0.3s;
+  color: #2ea8ee;
+}
+@media only screen and (max-width: 400px) {
+  #word-brand {
+    display: none;
+  }
+}
+/* END NAVIGATION STYLES */
+
+/* PROFILE STYLES */
+#profile-picture {
+  justify-content: flex-end;
+  padding-right: 40px;
+}
+#profileShowToggle {
+  display: flex;
+  cursor: pointer;
+}
+/* END PROFILE STYLES */
+
+/* HERO SECTION STYLES */
+#hero-section {
+  width: 100vw;
+  height: calc(100vh - 160px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 160px;
+  padding: 30px;
+  color: #fff;
+}
+/* END HERO SECTION STYLES */
+
+
+/*
+MATERIAL BUTTON (WITH SOME MODIFICATIONS)
+COPIED FROM : https://codepen.io/finnhvman/pen/MQyJxV
+BY: Ben Szabo
+*/
+
+.material-button-raised {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 10px;
+  padding: 0 16px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 36px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.shadow-botton{
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+}
+.blue-button{
+  color: #fff;
+  background-color: #2196f3;
+}
+.white-button{
+  color: #2196f3;
+  background-position: 8px 8px !important; 
+  background-repeat: no-repeat !important;
+  padding: 4px 15px 4px 40px !important;
+  text-transform: uppercase;
+}
+.material-button-raised:hover,
+.material-button-raised:focus {
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+}
+.material-button-raised:active {
+  box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+.material-button-raised:disabled {
+  color: rgba(0, 0, 0, 0.38);
+  background-color: rgba(0, 0, 0, 0.12);
+  box-shadow: none;
+  cursor: initial;
+}
+.material-button-raised::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: currentColor;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.material-button-raised:hover::before {
+  opacity: 0.12;
+}
+.material-button-raised:focus::before {
+  opacity: 0.2;
+}
+.material-button-raised:active::before {
+  opacity: 0.32;
+}
+.material-button-raised:disabled::before {
+  opacity: 0;
+}
+.material-button-raised::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 18px;
+  border-radius: 50%;
+  padding: 50%;
+  width: 32px;
+  height: 32px;
+  background-color: currentColor;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(1) ;
+  transition: opacity 1s, transform 0.5s;
+}
+.material-button-raised:active::after {
+  opacity: 0.4;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0s;
+}
+.material-button-raised:disabled::after {
+  opacity: 0;
+}
+/* END MATERIAL BUTTON */
+
+
+
+
+
+
+
+/* YEAY DONE! HUFF*/

@@ -1,0 +1,81 @@
+<html>
+    <head>
+    <title>Tugas Praktikum - Modul 7</title>
+    <style type="text/css"> 
+        *{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        td{
+            padding: 5px;
+        }
+        table{
+            padding: 10px;
+            border: 1px solid black;
+        }
+    </style>
+    </head>
+    <body>
+        <center>
+        <form method="post" action="generate.php">
+        <h1>Flexible Table Generator</h1>
+        <div>
+            <table>
+            <tr>
+                <td>Rows</td>
+                <td>:</td>
+                <td>
+                    <input name="JumlahRow" type="text" id="JumlahRow" 
+                    onKeyUp="getmax();" onfocus="this.select();"/>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Columns</label></td>
+                <td>:</td>
+                <td>
+                    <input name="JumlahColum" type="text" id="JumlahColum" 
+                    onKeyUp="getmax();" onfocus="this.select();"/>
+                </td>
+            </tr>
+            <tr>
+                <td>Cell Total </td>
+                <td>:</td>
+                <td>
+                    <input name="JumlahCell" type="text" id="JumlahCell" 
+                    onKeyUp="getmax();" onFocus="this.select();"/>
+                </td>
+            </tr>
+            <tr>
+                <td>Max Cells </td>
+                <td>:</td>
+                <td>
+                    <input name="maxcells" type="text" id="maxcells" 
+                    readonly="readonly" style="text-align:center"/>
+                </td>
+            </tr>
+            </table>
+        </div>
+        <br/>
+        <div>
+            <input type="submit" name="Generate" value="Generate"/>
+            <input type="reset" name="Reset" value="Reset"/>
+        </div>
+        </form>
+    </center>
+    </body>
+    <script language="JavaScript" type="text/javascript">
+        function getmax() {
+            var R = parseInt(document.getElementById('JumlahRow').value);
+            var C = parseInt(document.getElementById('JumlahColum').value);
+            var X = parseInt(document.getElementById('JumlahCell').value);
+            var cellmax = document.getElementById('maxcells');
+            var total = 'N/a';
+            total = R * C;   
+            cellmax.value = new String(total);
+            if (X > total)
+            {
+                alert('Anda memasukkan cell total yang terlalu besar. Masukan =' + total);
+                document.getElementById('CellsTotal').value = new String();
+            }
+        }
+    </script>
+</html>
